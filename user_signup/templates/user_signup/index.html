@@ -1,0 +1,32 @@
+{% extends 'base_login.html' %}
+<!DOCTYPE html>
+
+{% load static %}
+
+    {% block base_login %}
+
+        <div class="main-container">
+            <div class="user-acccess">
+                <div class="login-container">
+                    <button>
+                        LogIn
+                    </button>
+                </div>
+                <div class="signup-container">
+                    <button>
+                        SignUp
+                    </button>
+                </div>
+            </div>
+            <div class="user-form">
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+
+                </form>
+            </div>
+        </div>
+
+    {% endblock %}
+
+

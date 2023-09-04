@@ -1,25 +1,27 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Get connected</title>
-    <link rel="stylesheet" href="../static/styles.css">
-    <script src="../static/scripts.js"></script>
+    <link rel="stylesheet" href="{% static 'user_signup/styles.css' %}">
+   
 </head>
 <body>
     <div>
-        <nav>
+        <nav class="--nav">
             <div>
-                <div><a href="../templates/index.html">Get Connected</a></div>
+                <div class="--icon"><a href="{% static 'user_signup/index.html' %}">Get Connected</a></div>
             </div>
             <div>
                 <div>
-                    <button>
+                    <button class="account-btn">
                         Account
                     </button>
                 </div>
-                <ul>
+                <ul class="--account-options">
                     <li class="sign-in" >
                         <a href="">
                             Sign Up
@@ -44,12 +46,12 @@
             </div>
             </div>
         </nav>
-        <main>
-            {% block content %}
+        <main class="base-main">
+            {% block base_login %}
             
-            {% endblock %
+            {% endblock %}
         </main>
-        <footer>
+        <footer class="page-footer">
             <div>
                 <span>
                     @ 2023 Get Connected, Inc.
@@ -58,4 +60,6 @@
         </footer>
     </div>
 </body>
+
+<script src="{% static 'user_signup/scripts.js' %}"></script>
 </html>

@@ -1,0 +1,139 @@
+* :focus{
+    outline:solid;
+    outline-offset: 2px;
+    outline-width: thin;
+    outline-color: rgb(89, 138, 236);
+  }
+  
+* {
+    font-family: "DM Sans", sans-serif;
+    text-decoration: none;
+    padding: 0;
+    margin: 0 0;
+    box-sizing: border-box;
+  }
+  
+html {
+    /* default 1.6rem */
+    /* 1px / 1.6rem = 0.625  */
+    font-size: 62.5%;   /* current 1rem = 1rem */
+    scroll-behavior: smooth;
+  }
+
+body {
+    animation: background 110s linear infinite;
+    background: linear-gradient(120deg, rgba(150,48,30,1) 0%,rgba(199,201,88,1) 10%,rgba(28,147,46,1) 20%,rgba(74,165,168,1) 30%,rgba(89,90,165,1) 40%,rgba(84,16,67,1) 50%,rgba(28,58,63,1) 60%,rgba(82,175,183,1) 70%,rgba(78,170,76,1) 80%,rgba(150,48,30,1) 90%,rgba(199,201,88,1) 100%);
+    background-size: 1000% 1000%;
+    transform: translate-(50%, 50%);
+  }
+
+  @keyframes background {
+    0%{background-position:0% 50%}
+    100%{background-position:100% 50%}
+  }
+
+
+  .--nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: #fff; */
+    padding: 10px 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.--icon a{
+    text-decoration: none;
+    color: #e9f5ac; 
+    font-size: 5rem;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px 20px;
+    border: none;
+}
+
+.--account-options{
+  display: none;
+}
+
+.--nav-show{
+  position: relative;
+  top: 0;
+  right: 0;
+  display:inline-block;
+}
+
+.--nav li{
+    background-color: #e9f5ac;
+    color: #000; 
+    margin: 1rem 2rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    list-style: none;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+}
+
+.--nav button{
+    background-color: #d2f136;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #000;
+}
+
+.--nav .log-out{
+  display: none ;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+}
+
+.--nav .log-out button{
+  background-color: #d2f136;
+  font-size: 1rem;
+}
+
+.base-main{
+  width: 100vw;
+  height: 100vh;
+}
+
+.--icon{
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #000000;
+}
+
+
+.page-footer{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: #d2f136;
+  font-size: 1.5rem;
+}
+
+.error-404{
+  max-width: 100%;
+  background-color: transparent;
+  padding-right: 56px;
+  line-height: 1.34;
+  font-size: 56px;
+  line-height: 68px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+}
